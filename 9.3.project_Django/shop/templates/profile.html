@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+{% block title %}
+
+User Profile
+{% endblock %}
+
+{% block content %}
+<style>
+    table {
+        width: 50%;
+        margin: auto;
+    }
+    table tr td {
+        padding: 10px;
+        border: 1px solid #000;
+    }
+</style>
+
+<h2>User Profile</h2>
+<h3>{{ user.username }} welcome</h3>
+<p>{{ user.email }}</p>
+<p>{{ user.phone }}</p>
+<p>{{ user.address }}</p>
+<a href="{% url 'signout' %}">
+    Exit From Account
+</a>
+
+{% endblock %}

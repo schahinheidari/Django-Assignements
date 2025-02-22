@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+{% block title %}
+
+registration form
+
+{% endblock %}
+
+{% block content %}
+<style>
+    table {
+        width: 50%;
+        margin: auto;
+    }
+    table tr td {
+        padding: 10px;
+        border: 1px solid #000;
+    }
+</style>
+<form method="post">
+    {% csrf_token %}
+    <table border="4px">
+    {{ form.as_table }}
+    </table>
+    <button type="submit">register</button>
+</form>
+<a href="{% url 'signin' %}">Already have an account? Sign in</a>
+
+{% endblock %}

@@ -1,0 +1,4 @@
+db-sqlite3
+Django>=4.0
+jdatetime
+django_jalali
